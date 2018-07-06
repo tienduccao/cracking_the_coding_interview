@@ -1,10 +1,8 @@
-from collections import Counter
+from utils import string_to_counter
 
 
 def has_all_unique_characters(string):
-    char_counter = Counter()
-    for char in string:
-        char_counter[char] += 1
+    char_counter = string_to_counter(string)
     return len(char_counter.keys()) == len(string)
 
 
